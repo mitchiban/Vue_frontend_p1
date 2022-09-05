@@ -51,6 +51,8 @@
     },
     mounted() {
       this.getLatestProducts()
+
+      document.title = 'Home | Djackets'
     },
     methods: {
       getLatestProducts() {
@@ -59,6 +61,8 @@
           .get('http://localhost:8000/api/v1/latest-products/')  
           .then(response => {
             this.latestProducts = response.data
+
+            
           })
           .catch(error => {
             console.log(error)
