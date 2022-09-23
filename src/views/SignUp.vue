@@ -76,7 +76,7 @@ export default {
                     password: this.password
                 }
                 axios
-                    .post("/api/v1/users/", formData)
+                    .post("http://localhost:8000/api/v1/users/", formData)
                     .then(response => {
                         toast({
                             message: 'Account created, please log in!',
